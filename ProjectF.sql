@@ -96,7 +96,7 @@ VALUES
 	('Superwog', 2018, 2021, 2);
 	('The Carrie Diaries', 2013, 2014, 2);
 
--- all episodes for show_id = 40
+-- all episodes for show_id = 40 name=The Carrie Diaries
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 		('Pilot', 40, 1, 1), 
 		('Lie With Me', 40, 2, 1),
@@ -125,6 +125,23 @@ VALUES 		('Pilot', 40, 1, 1),
 		('Hungry Like the Wolf', 40, 11, 2),
 		('This is the Time ', 40, 12, 2),
 		('Run to You', 40, 13, 2);
+
+-- all episodes for show_id = 39 name=Superwog
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 		('Pilot', 39, 1, 1), 
+		('Breaking Dad', 39, 2, 1),
+		('The Family Jewels', 39, 3, 1),
+		('FThe Final Exam', 39, 4, 1),
+		('The Formal', 39, 5, 1),
+		('Power Trip', 39, 6, 1),
+		('The Zombie Apocalypse', 39, 7, 1),
+
+		('The P Plates', 39, 1, 2), 
+		('The Lawsuit', 39, 2, 2),
+		('The Magpie', 39, 3, 2),
+		('Something Fishy', 39, 4, 2),
+		('The Lump', 39, 5, 2),
+		('Jump Ya', 39, 6, 2),
 
 -- Episodes for The Carrie Diaries, Season 1
 
