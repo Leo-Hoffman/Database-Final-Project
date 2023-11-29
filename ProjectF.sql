@@ -52,17 +52,7 @@ CREATE TABLE episode (
 		UNIQUE(show_id, episode_number, season_number)
 );
 
--- show_id = 1
-INSERT INTO shows (show_name, start_year, end_year, number_of_seasons)
-VALUES 
-  ('Alice in Borderland', 2020, NULL, 2);
-
--- show_id = 2
-INSERT INTO shows (show_name, start_year, end_year, number_of_seasons)
-VALUES 
-  ('Wednesday', 2022, NULL, 1);
-
---show_id = 5
+--show_id = 1
 INSERT INTO shows (show_name, start_year, end_year, number_of_seasons)
 VALUES 
 ('The Sopranos', 1999, 2007, 1);
