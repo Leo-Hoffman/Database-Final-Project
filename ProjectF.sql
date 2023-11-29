@@ -283,3 +283,25 @@ INSERT INTO platform VALUES
 (2, "Amazon Prime"),
 (3, "HBO MAX"),
 (4, "Hulu");
+
+CREATE TABLE user_episode (
+	episode_id INT,
+    user_id INT,
+    user_rating INT,
+    user_has_seen BOOLEAN DEFAULT FALSE,
+    in_watchlist BOOLEAN DEFAULT FALSE,
+    CONSTRAINT
+		PRIMARY KEY (episode_id, user_id),
+	CONSTRAINT
+		FOREIGN KEY (episode_id)
+		REFERENCES episode(episode_id),
+	CONSTRAINT user_id
+		FOREIGN KEY (user_id)
+        REFERENCES users(user_id)
+);
+
+INSERT INTO user_episode (episode_id, user_id, user_rating, user_has_seen, in_watchlist) VALUES
+	(12, 'robert125', 9, TRUE, FALSE);
+
+
+	
