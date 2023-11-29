@@ -55,7 +55,7 @@ CREATE TABLE episode (
 --show_id = 1
 INSERT INTO shows (show_name, start_year, end_year, number_of_seasons)
 VALUES 
-	('The Sopranos', 1999, 2007, 6),
+	('The Sopranos', 1999, 2007, 6), 
 	('Wednesday', 2022, NULL, 1),
 	('Breaking Bad', 2008, 2013, 5),
 	('Squid Game,', 2021, 2021, 1), 
@@ -194,7 +194,7 @@ VALUES ('Wednesday\'s Child is Full of Wow', 2, 1, 1),
 	('If You Don\'s Woe Me by Now', 2, 7, 1),
 	('A Merder of Woe', 2, 8, 1);
 
-
+-- all episode for show id=29, insecure
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
             ('Insecure as Fuck', 7, 1, 1), 
@@ -204,21 +204,17 @@ VALUES
 		('Shady as F...', 7, 5, 1),
 		('Guilty as F...', 7, 6, 1),
 		('Real as F...', 7, 7, 1),
-		('Broken as F...', 7, 8, 1);
+		('Broken as F...', 7, 8, 1),
 
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
-            ('Hella Great', 7, 1, 2), 
+                ('Hella Great', 7, 1, 2), 
 		('Hella Questions', 7, 2, 2),
 		('Hella Open', 7, 3, 2),
 		('Hella LA', 7, 4, 2),
 		('Hella Shook', 7, 5, 2),
 		('Hello Blows', 7, 6, 2),
 		('Hella Disrespectful', 7, 7, 2),
-		('Hella Perspective', 7, 8, 2);
-
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
+		('Hella Perspective', 7, 8, 2),
+	
 		('Better-Like', 7, 1, 3),
 		('Familiar-Like', 7, 2, 3),
 		('Backwards-Like', 7, 3, 3),
@@ -226,11 +222,9 @@ VALUES
 		('High-Like', 7, 5, 3),
 		('Ready-Like', 7, 6, 3),
 		('Obsessed-Like', 7, 7, 3),
-            ('Ghost-Like', 7, 8, 3);
-
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES
-            ('Lowkey Feelin\' Myself', 7, 10, 4), 
+                ('Ghost-Like', 7, 8, 3),
+	
+              ('Lowkey Feelin\' Myself', 7, 10, 4), 
 		('Lowkey Distant', 7, 9, 4),
 		('Lowkey Thankful', 7, 3, 4),
 		('Lowkey Losin\' It', 7, 4, 4),
@@ -239,10 +233,8 @@ VALUES
 		('Lowkey Trippin', 7, 7, 4),
 		('Lowkey Happy', 7, 8, 4),
 		('Lowkey Trying', 7, 9, 4),
-            ('Lowkey Lost', 7, 10, 4);
-        
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES
+            ('Lowkey Lost', 7, 10, 4),
+	
 		('Reunited, Okay?', 7, 2, 5),
 		('Growth, Okay?', 7, 3, 5),
 		('Pressure, Okay?', 7, 4, 5),
