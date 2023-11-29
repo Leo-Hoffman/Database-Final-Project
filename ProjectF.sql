@@ -1,35 +1,35 @@
 CREATE DATABASE show_tracker;
 
 CREATE TABLE users (
-user_id INT AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(15),
-user_password VARCHAR(15),
-age INT NOT NULL
+	user_id INT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(15),
+	user_password VARCHAR(15),
+	age INT NOT NULL
 );
 DROP TABLE users;
 
 --for users
 INSERT INTO users (username, user_password, age) VALUES
-('robert125', 'Atlas&theAir', 54), ('adam@johnson', 'DevilsPaw', 32),
-('GodsChild4U', 'Living$84', 36), ('leo1366', 'Walrus9%', 40),
-('13mario!', 'mammoth93', 19), ('patrick159', 'badger$23', 28),
-('joshua#1', 'Axis0Fevil', 25), ('GiantOrGod?', 'Bluffs@4942', 41),
-('Swiftie4U', '77Taylor23', '19'), ('GodOfRome', '64578@K', 59),
-('BackIn1985', 'tigerhawk', '22'), ('Jordan1776', '19patriots', 30),
-('MikeGod', 'moses14U', 45), ('Carol166', 'LoveHurts99', 35),
-('george1225', 'Hi88K', 26), ('JawsLord', 'mul98*54', 51),
-('JuliusPalace', '@Ceaser87', 19), ('Freddy845', 'tigerOh23', 23),
-('Harold1939', '$Meridian#5', 47), ('Pat&Royce', 'papa?6^6', 39),
-('LionKing1994', 'simbaah3!', 34), ('David100%', 'Stir16pots', 38),
-('julia1549', 'ConvictBoy', 65), ('283594', 'Bolton<?>', 28),
-('?Madison!', 'peoples69', 40), ('Godeater', '2123455', 39),
-('Matt1935', 'Fire&Blood', 29), ('WorldsEnd', 'jay757pol', 31),
-('For7orNaught', '220Ball17', 45), ('Sarah20559', '75:rearend', 30),
-('Christian1994', 'Rain/bow*', 19), ('Jenn!99%', 'g4u3w6s22ou', 22),
-('Enigma1942', 'Shark55#rea', 31), ('Jackson1*', '40/wolf\35', 30),
-('GatorFL81', 'muschamp333', 27), ('EVILin666', '14Cult/120tut', 42),
-('1984Orwell', 'BigBrother', 51), ('SpidermanPS3', 'a2n743rtx2z', 24),
-('Max563Iowa', 'pillow930-039', 38), ('robert$500', 'liveordie13', 44);
+	('robert125', 'Atlas&theAir', 54), ('adam@johnson', 'DevilsPaw', 32),
+	('GodsChild4U', 'Living$84', 36), ('leo1366', 'Walrus9%', 40),
+	('13mario!', 'mammoth93', 19), ('patrick159', 'badger$23', 28),
+	('joshua#1', 'Axis0Fevil', 25), ('GiantOrGod?', 'Bluffs@4942', 41),
+	('Swiftie4U', '77Taylor23', '19'), ('GodOfRome', '64578@K', 59),
+	('BackIn1985', 'tigerhawk', '22'), ('Jordan1776', '19patriots', 30),
+	('MikeGod', 'moses14U', 45), ('Carol166', 'LoveHurts99', 35),
+	('george1225', 'Hi88K', 26), ('JawsLord', 'mul98*54', 51),
+	('JuliusPalace', '@Ceaser87', 19), ('Freddy845', 'tigerOh23', 23),
+	('Harold1939', '$Meridian#5', 47), ('Pat&Royce', 'papa?6^6', 39),
+	('LionKing1994', 'simbaah3!', 34), ('David100%', 'Stir16pots', 38),
+	('julia1549', 'ConvictBoy', 65), ('283594', 'Bolton<?>', 28),
+	('?Madison!', 'peoples69', 40), ('Godeater', '2123455', 39),
+	('Matt1935', 'Fire&Blood', 29), ('WorldsEnd', 'jay757pol', 31),
+	('For7orNaught', '220Ball17', 45), ('Sarah20559', '75:rearend', 30),
+	('Christian1994', 'Rain/bow*', 19), ('Jenn!99%', 'g4u3w6s22ou', 22),
+	('Enigma1942', 'Shark55#rea', 31), ('Jackson1*', '40/wolf\35', 30),
+	('GatorFL81', 'muschamp333', 27), ('EVILin666', '14Cult/120tut', 42),
+	('1984Orwell', 'BigBrother', 51), ('SpidermanPS3', 'a2n743rtx2z', 24),
+	('Max563Iowa', 'pillow930-039', 38), ('robert$500', 'liveordie13', 44);
 
 CREATE TABLE shows (
 	show_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -60,7 +60,9 @@ VALUES
 	('Breaking Bad', 2008, 2013, 5),
 	('Squid Game,', 2021, 2021, 1), 
 	('The Bear', 2021, 2021, 1),
-	('The Shield', 2002, 2008, 1), 
+	('The Shield', 2002, 2008, 1),
+	('Insecure', 2016, 2021, 5),
+	('The Queen\`s Gambit', 2020, 2020, 1);
 	('Fargo', 2014, NULL, 1),
 	('Game of Thrones', 2011, 2019, 9), 
 	('BattleStar Galactica', 1978, 1979, 1),
@@ -83,8 +85,6 @@ VALUES
 	('Gravity Falls', 2015, 2016, 1), 
 	('Twin Peaks', 1989, 1991, 3);
 	('Alice in Borderland', 2020, NULL, 2),
-	('Insecure', 2016, 2021, 5),
-	('The Queen\`s Gambit', 2020, 2020, 1);
 	('Unorthodox', 2020, 2020, 1);
 	('The Fall of the House of Usher', 2023, 2023, 1);
 	('Gaslit', 2023, 2023, 1),
@@ -147,6 +147,7 @@ VALUES ('Wednesday\'s Child is Full of Wow', 2, 1, 1),
 	('If You Don\'s Woe Me by Now', 2, 7, 1),
 	('A Merder of Woe', 2, 8, 1);
 
+-- All episodes for Insecure, Season 1
 
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
@@ -159,27 +160,33 @@ VALUES
 		('Real as F...', 7, 7, 1),
 		('Broken as F...', 7, 8, 1);
 
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
-            ('Hella Great', 7, 1, 2), 
-		('Hella Questions', 7, 2, 2),
-		('Hella Open', 7, 3, 2),
-		('Hella LA', 7, 4, 2),
-		('Hella Shook', 7, 5, 2),
-		('Hello Blows', 7, 6, 2),
-		('Hella Disrespectful', 7, 7, 2),
-		('Hella Perspective', 7, 8, 2);
+-- All episodes for Insecure, Season 2
 
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
-		('Better-Like', 7, 1, 3),
-		('Familiar-Like', 7, 2, 3),
-		('Backwards-Like', 7, 3, 3),
-		('Fresh-Like', 7, 4, 3),
-		('High-Like', 7, 5, 3),
-		('Ready-Like', 7, 6, 3),
-		('Obsessed-Like', 7, 7, 3),
-            ('Ghost-Like', 7, 8, 3);
+        ('Hella Great', 7, 1, 2), 
+	('Hella Questions', 7, 2, 2),
+	('Hella Open', 7, 3, 2),
+	('Hella LA', 7, 4, 2),
+	('Hella Shook', 7, 5, 2),
+	('Hello Blows', 7, 6, 2),
+	('Hella Disrespectful', 7, 7, 2),
+	('Hella Perspective', 7, 8, 2);
+
+-- All episodes for Insecure, Season 3
+
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+	('Better-Like', 7, 1, 3),
+	('Familiar-Like', 7, 2, 3),
+	('Backwards-Like', 7, 3, 3),
+	('Fresh-Like', 7, 4, 3),
+	('High-Like', 7, 5, 3),
+	('Ready-Like', 7, 6, 3),
+	('Obsessed-Like', 7, 7, 3),
+	('Ghost-Like', 7, 8, 3);
+
+-- All episodes for Insecure, Season 4
 
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES
@@ -193,28 +200,30 @@ VALUES
 		('Lowkey Happy', 7, 8, 4),
 		('Lowkey Trying', 7, 9, 4),
             ('Lowkey Lost', 7, 10, 4);
-        
+
+-- All episodes for Insecure, Season 5
+	
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES
-		('Reunited, Okay?', 7, 2, 5),
-		('Growth, Okay?', 7, 3, 5),
-		('Pressure, Okay?', 7, 4, 5),
-		('Faulty, Okay?', 7, 5, 5),
-		('Episode 6', 7, 6, 5),
-		('Episode 7', 7, 7, 5),
-		('Episode 8', 7, 8, 5),
-		('Episode 9', 7, 6, 5),
-		('Episode 10', 7, 7, 5);
+	('Reunited, Okay?', 7, 2, 5),
+	('Growth, Okay?', 7, 3, 5),
+	('Pressure, Okay?', 7, 4, 5),
+	('Faulty, Okay?', 7, 5, 5),
+	('Episode 6', 7, 6, 5),
+	('Episode 7', 7, 7, 5),
+	('Episode 8', 7, 8, 5),
+	('Episode 9', 7, 6, 5),
+	('Episode 10', 7, 7, 5);
   
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
-            ('Openings', 8, 1, 1), 
-		('Exchanges', 8, 2, 1),
-		('Doubled Pawns', 8, 3, 1),
-		('Middle Game', 8, 4, 1),
-		('Fork', 8, 5, 1),
-		('Adjournment', 8, 6, 1),
-		('End Game', 8, 7, 1);
+	('Openings', 8, 1, 1), 
+	('Exchanges', 8, 2, 1),
+	('Doubled Pawns', 8, 3, 1),
+	('Middle Game', 8, 4, 1),
+	('Fork', 8, 5, 1),
+	('Adjournment', 8, 6, 1),
+	('End Game', 8, 7, 1);
 
 
 INSERT INTO episode VALUES
