@@ -97,7 +97,8 @@ VALUES
 ('The Carrie Diaries', 2013, 2014, 2);
 
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES ('Episode 1', 40, 1, 1), 
+VALUES
+		('Episode 1', 40, 1, 1), 
 		('Episode 2', 40, 2, 1),
 		('Episode 3', 40, 3, 1),
 		('Episode 4', 40, 4, 1),
@@ -105,7 +106,7 @@ VALUES ('Episode 1', 40, 1, 1),
 		('Episode 6', 40, 6, 1),
 		('Episode 7', 40, 7, 1),
 		('Episode 8', 40, 8, 1),
-        ('Episode 1', 40, 9, 1), 
+        	('Episode 1', 40, 9, 1), 
 		('Episode 2', 40, 10, 1),
 		('Episode 3', 40, 11, 1),
 		('Episode 4', 40, 12, 1),
@@ -113,35 +114,36 @@ VALUES ('Episode 1', 40, 1, 1),
 
  -- all episode for show_id = 1
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES ('Episode 1', 1, 1, 1), 
-		('Episode 2', 1, 2, 1),
-		('Episode 3', 1, 3, 1),
-		('Episode 4', 1, 4, 1),
-		('Episode 5', 1, 5, 1),
-		('Episode 6', 1, 6, 1),
-		('Episode 7', 1, 7, 1),
-		('Episode 8', 1, 8, 1),
-        
+VALUES
+	('Episode 1', 1, 1, 1), 
+	('Episode 2', 1, 2, 1),
+	('Episode 3', 1, 3, 1),
+	('Episode 4', 1, 4, 1),
+	('Episode 5', 1, 5, 1),
+	('Episode 6', 1, 6, 1),
+	('Episode 7', 1, 7, 1),
+	('Episode 8', 1, 8, 1),
+
         ('Episode 1', 1, 1, 2), 
-		('Episode 2', 1, 2, 2),
-		('Episode 3', 1, 3, 2),
-		('Episode 4', 1, 4, 2),
-		('Episode 5', 1, 5, 2),
-		('Episode 6', 1, 6, 2),
-		('Episode 7', 1, 7, 2),
-		('Episode 8', 1, 8, 2);
+	('Episode 2', 1, 2, 2),
+	('Episode 3', 1, 3, 2),
+	('Episode 4', 1, 4, 2),
+	('Episode 5', 1, 5, 2),
+	('Episode 6', 1, 6, 2),
+	('Episode 7', 1, 7, 2),
+	('Episode 8', 1, 8, 2);
 
 -- all episode for show id=2 
   
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES ('Wednesday\'s Child is Full of Wow', 2, 1, 1), 
-		('Woe Is The Loneliest Number', 2, 2, 1),
-		('Friend or Woe', 2, 3, 1),
-		('Woe What a Night', 2, 4, 1),
-		('You Reap What You Woe', 2, 5, 1),
-		('Quid Prop Woe', 2, 6, 1),
-		('If You Don\'s Woe Me by Now', 2, 7, 1),
-		('A Merder of Woe', 2, 8, 1);
+	('Woe Is The Loneliest Number', 2, 2, 1),
+	('Friend or Woe', 2, 3, 1),
+	('Woe What a Night', 2, 4, 1),
+	('You Reap What You Woe', 2, 5, 1),
+	('Quid Prop Woe', 2, 6, 1),
+	('If You Don\'s Woe Me by Now', 2, 7, 1),
+	('A Merder of Woe', 2, 8, 1);
         
 CREATE TABLE platform ( 
 	platform_id INT AUTO_INCREMENT PRIMARY KEY,
