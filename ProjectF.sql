@@ -96,44 +96,17 @@ VALUES
 	('Superwog', 2018, 2021, 2);
 	('The Carrie Diaries', 2013, 2014, 2);
 
--- Episodes for The Carrie Diaries, Season 1
+-- Episodes for id=1 The Sopranos
 
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES
-	('Episode 1', 40, 1, 1), 
-	('Episode 2', 40, 2, 1),
-	('Episode 3', 40, 3, 1),
-	('Episode 4', 40, 4, 1),
-	('Episode 5', 40, 5, 1),
-	('Episode 6', 40, 6, 1),
-	('Episode 7', 40, 7, 1),
-	('Episode 8', 40, 8, 1),
-	('Episode 1', 40, 9, 1), 
-	('Episode 2', 40, 10, 1),
-	('Episode 3', 40, 11, 1),
-	('Episode 4', 40, 12, 1),
-	('Episode 5', 40, 13, 1),
+INSERT INTO episode VALUES
+	("Pilot", 1, 1, 1, '1999'),
+	("46 Long", 1, 1, 2, '1999'),
+	("Denial, Anger, Acceptance", 1, 1, 3, '1999'),
+	("Whitecaps", 1, 4, 13, '2002'),
+	("Made in America", 1, 6, 21, '2007'),
+	("The Blue Comet", 1, 6, 20, '2007');
 
- -- all episode for show_id = 1
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES
-	('Episode 1', 1, 1, 1), 
-	('Episode 2', 1, 2, 1),
-	('Episode 3', 1, 3, 1),
-	('Episode 4', 1, 4, 1),
-	('Episode 5', 1, 5, 1),
-	('Episode 6', 1, 6, 1),
-	('Episode 7', 1, 7, 1),
-	('Episode 8', 1, 8, 1),
 
-        ('Episode 1', 1, 1, 2), 
-	('Episode 2', 1, 2, 2),
-	('Episode 3', 1, 3, 2),
-	('Episode 4', 1, 4, 2),
-	('Episode 5', 1, 5, 2),
-	('Episode 6', 1, 6, 2),
-	('Episode 7', 1, 7, 2),
-	('Episode 8', 1, 8, 2);
 
 -- all episode for show id=2, Wednesday
   
@@ -146,6 +119,16 @@ VALUES ('Wednesday\'s Child is Full of Wow', 2, 1, 1),
 	('Quid Prop Woe', 2, 6, 1),
 	('If You Don\'s Woe Me by Now', 2, 7, 1),
 	('A Merder of Woe', 2, 8, 1);
+
+-- Episodes for id=3 Breaking Bad
+	
+INSERT INTO episode VALUES
+	("Ozymandias", 2, 5, 14, 2013),
+	("Felina", 2, 5, 16, 2013),
+	("Crawl Space", 4, 11, 2011),
+	("Face Off", 2, 4, 13, 2011),
+	("Granite State", 5, 15, 2013);
+
 
 -- All episodes for Insecure, Season 1
 
@@ -214,7 +197,8 @@ VALUES
 	('Episode 8', 7, 8, 5),
 	('Episode 9', 7, 6, 5),
 	('Episode 10', 7, 7, 5);
-  
+
+-- All episodes for The Queen's Gambit
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
 	('Openings', 8, 1, 1), 
@@ -225,49 +209,48 @@ VALUES
 	('Adjournment', 8, 6, 1),
 	('End Game', 8, 7, 1);
 
+
+-- Episodes for The Carrie Diaries, Season 1
+
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 		('Pilot', 40, 1, 1), 
-		('Lie With Me', 40, 2, 1),
-		('Read Before Use', 40, 3, 1),
-		('Fright Night', 40, 4, 1),
-		('Dangerous Territory', 40, 5, 1),
-		('Endgame', 40, 6, 1),
-		('Caught', 40, 7, 1),
-		('Hush Hush', 40, 8, 1),
-        	('The Great Unknown', 40, 9, 1), 
-		('The Long and Winding Road Not Taken', 40, 10, 1),
-		('Identity Crisis', 40, 11, 1),
-		('A First Time for Everything', 40, 12, 1),
-		('Kiss Yesterdat Goodbye', 40, 13, 1),
+VALUES
+	('Episode 1', 40, 1, 1), 
+	('Episode 2', 40, 2, 1),
+	('Episode 3', 40, 3, 1),
+	('Episode 4', 40, 4, 1),
+	('Episode 5', 40, 5, 1),
+	('Episode 6', 40, 6, 1),
+	('Episode 7', 40, 7, 1),
+	('Episode 8', 40, 8, 1),
+	('Episode 1', 40, 9, 1), 
+	('Episode 2', 40, 10, 1),
+	('Episode 3', 40, 11, 1),
+	('Episode 4', 40, 12, 1),
+	('Episode 5', 40, 13, 1),
 
-		('Win Some, Lose Some', 40, 1, 2), 
-		('Express Yourself', 40, 2, 2),
-		('Strings Attached', 40, 3, 2),
-		('Borderline', 40, 4, 2),
-		('Too Close for Comfort', 40, 5, 2),
-		('The Safety Dance', 40, 6, 2),
-		('I Heard a Rumor', 40, 7, 2),
-		('The Second Time Around', 40, 8, 2),
-        	('Under Pressure', 40, 9, 2), 
-		('Date Expectations', 40, 10, 2),
-		('Hungry Like the Wolf', 40, 11, 2),
-		('This is the Time ', 40, 12, 2),
-		('Run to You', 40, 13, 2);
-	
+ -- all episode for show_id = 1
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES
+	('Episode 1', 1, 1, 1), 
+	('Episode 2', 1, 2, 1),
+	('Episode 3', 1, 3, 1),
+	('Episode 4', 1, 4, 1),
+	('Episode 5', 1, 5, 1),
+	('Episode 6', 1, 6, 1),
+	('Episode 7', 1, 7, 1),
+	('Episode 8', 1, 8, 1),
 
-INSERT INTO episode VALUES
-("Pilot", 1, 1, 1, '1999'),
-("46 Long", 1, 1, 2, '1999'),
-("Denial, Anger, Acceptance", 1, 1, 3, '1999'),
-("Made in America", 1, 6, 21, '2007-01-10'),
-("The Blue Comet", 1, 6, 20, '2007-01-10'),
-("Whitecaps", 1, 4, 13, '2002'),
-("Ozymandias", 2, 5, 14, 2013),
-("Felina", 2, 5, 16, 2013),
-("Face Off", 2, 4, 13, 2011),
-("Granite State", 5, 15, 2013),
-("Crawl Space", 4, 11, 2011),
-("Crawl Space", 4, 11, 2011);
+        ('Episode 1', 1, 1, 2), 
+	('Episode 2', 1, 2, 2),
+	('Episode 3', 1, 3, 2),
+	('Episode 4', 1, 4, 2),
+	('Episode 5', 1, 5, 2),
+	('Episode 6', 1, 6, 2),
+	('Episode 7', 1, 7, 2),
+	('Episode 8', 1, 8, 2);
+
+
+
 
 INSERT INTO user_episode VALUES
 (1, 1, 9, TRUE, FALSE),
