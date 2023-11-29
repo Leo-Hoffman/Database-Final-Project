@@ -225,6 +225,35 @@ VALUES
 	('Adjournment', 8, 6, 1),
 	('End Game', 8, 7, 1);
 
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 		('Pilot', 40, 1, 1), 
+		('Lie With Me', 40, 2, 1),
+		('Read Before Use', 40, 3, 1),
+		('Fright Night', 40, 4, 1),
+		('Dangerous Territory', 40, 5, 1),
+		('Endgame', 40, 6, 1),
+		('Caught', 40, 7, 1),
+		('Hush Hush', 40, 8, 1),
+        	('The Great Unknown', 40, 9, 1), 
+		('The Long and Winding Road Not Taken', 40, 10, 1),
+		('Identity Crisis', 40, 11, 1),
+		('A First Time for Everything', 40, 12, 1),
+		('Kiss Yesterdat Goodbye', 40, 13, 1),
+
+		('Win Some, Lose Some', 40, 1, 2), 
+		('Express Yourself', 40, 2, 2),
+		('Strings Attached', 40, 3, 2),
+		('Borderline', 40, 4, 2),
+		('Too Close for Comfort', 40, 5, 2),
+		('The Safety Dance', 40, 6, 2),
+		('I Heard a Rumor', 40, 7, 2),
+		('The Second Time Around', 40, 8, 2),
+        	('Under Pressure', 40, 9, 2), 
+		('Date Expectations', 40, 10, 2),
+		('Hungry Like the Wolf', 40, 11, 2),
+		('This is the Time ', 40, 12, 2),
+		('Run to You', 40, 13, 2);
+	
 
 INSERT INTO episode VALUES
 ("Pilot", 1, 1, 1, '1999'),
