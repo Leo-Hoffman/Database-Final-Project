@@ -461,6 +461,41 @@ INSERT INTO user_episode (episode_id, user_id, user_rating, user_has_seen, in_wa
 (35, 33, 8, FALSE, FALSE), (31, 34, 3, TRUE, TRUE), (40, 35, 4, FALSE, TRUE), (32, 36, 2, TRUE, FALSE),
 (38, 37, 6, FALSE, TRUE), (39, 38, 10, TRUE, TRUE), (34, 39, 7, TRUE, FALSE), (41, 40, 3, TRUE, FALSE);
 
+CREATE TABLE user_show (
+    user_id INT,
+	show_id INT,
+    user_rating INT,
+    user_finished BOOLEAN DEFAULT FALSE,
+    in_watchlist BOOLEAN DEFAULT FALSE,
+    CONSTRAINT
+		PRIMARY KEY (show_id, user_id),
+	CONSTRAINT
+		FOREIGN KEY (show_id)
+		REFERENCES shows(show_id),
+	CONSTRAINT
+		FOREIGN KEY (user_id)
+        REFERENCES users(user_id)
+);
+
+INSERT user_show (user_id, show_id, user_rating, user_finished, in_watchlist) VALUES
+(1, 12, 6, TRUE, FALSE), (2, 8, 3, FALSE, TRUE), (3, 9, 7, TRUE, TRUE), (4, 25, 5, FALSE, TRUE), 
+(5, 16, 2, FALSE, TRUE), (6, 30, 10, TRUE, TRUE), (7, 21, 8, TRUE, FALSE), (8, 1, 4, FALSE, TRUE), 
+(9, 14, 7, TRUE, TRUE), (10, 33, 4, FALSE, TRUE ), (11, 15, 8, FALSE, TRUE), (12, 10, 3, TRUE, FALSE), 
+(13, 35, 5, FALSE, TRUE), (14, 7, 9, TRUE, TRUE ), (15, 11, TRUE, FALSE), (16, 23, 10, FALSE, TRUE),
+(17, 18, 1, TRUE, TRUE), (18, 31, 2, FALSE, TRUE), (19, 29, 4, TRUE, TRUE), (20, 5, 9, FALSE, FALSE),
+
+(21, 24, 5, TRUE, FALSE), (22, 38, 7, TRUE, TRUE), (23, 34, 8, TRUE, TRUE), (24, 17, 6, TRUE, FALSE),
+(25, 6, 9, FALSE, TRUE), (26, 37, 5, TRUE, FALSE), (27, 4, 3, FALSE, TRUE), (28, 40, 10, TRUE, FALSE),
+(29, 22, 10, TRUE, TRUE), (30, 3, 6 FALSE, TRUE), (31, 32, 2, FALSE, FALSE), (32, ),
+(33, ), (34, ), (35, ), (36, ),
+(37, ), (38, ), (39, ), (40, );
+
+
+
+
+
+
+
 
 
 
