@@ -431,3 +431,46 @@ INSERT INTO platform VALUES
 (2, "Amazon Prime"),
 (3, "HBO MAX"),
 (4, "Hulu");
+
+
+CREATE TABLE user_episode (
+	episode_id INT,
+    user_id INT,
+    user_rating INT,
+    user_has_seen BOOLEAN DEFAULT FALSE,
+    in_watchlist BOOLEAN DEFAULT FALSE,
+    CONSTRAINT
+		PRIMARY KEY (episode_id, user_id),
+	CONSTRAINT
+		FOREIGN KEY (episode_id)
+		REFERENCES episode(episode_id),
+	CONSTRAINT user_id
+		FOREIGN KEY (user_id)
+        REFERENCES users(user_id)
+);
+
+INSERT INTO user_episode (episode_id, user_id, user_rating, user_has_seen, in_watchlist) VALUES
+(2, 1, 8, TRUE, TRUE), (13, 2, 5, FALSE, TRUE), (1, 3, 1, FALSE, FALSE), (15, 4, 9, TRUE, FALSE),
+(9, 5, 6, TRUE, TRUE), (3, 6, 10, TRUE, FALSE), (4, 7, 7, TRUE, TRUE), (23, 8, 2, FALSE, TRUE), 
+(6, 9, 4, FALSE, TRUE), (17, 10, 3, TRUE, TRUE), (10, 11, 1, TRUE, FALSE), (30, 12, 3, TRUE, FALSE), 
+(22, 13, 5, TRUE, FALSE), (14, 14, 8, FALSE, FALSE), (19, 15, 6, TRUE, TRUE), (18, 16, 7, FALSE, TRUE),
+(16, 17, 3, FALSE, FALSE), (11, 18, 4, TRUE, TRUE), (7, 19, 5, TRUE, FALSE ), (24, 20, 9, TRUE, FALSE),
+(21, 21, 7, TRUE, FALSE), (, 25, 22, 3, FALSE, FALSE), (12, 23, 6, TRUE, TRUE), (8. 24, 5, FALSE, TRUE),
+(5, 25, 4, FALSE, FALSE), (10, 26, 1, TRUE, FALSE), (27, 27, 8, FALSE, TRUE), (29, 28, 10, TRUE, FALSE),
+(20, 29, 7, TRUE, TRUE), (25, 30, 1, FALSE, TRUE), (45, 31, 9, TRUE, FALSE), (42, 32, 5, TRUE, FALSE),
+(35, 33, 8, FALSE, FALSE), (31, 34, 3, TRUE, TRUE), (40, 35, 4, FALSE, TRUE), (32, 36, 2, TRUE, FALSE),
+(38, 37, 6, FALSE, TRUE), (39, 38, 10, TRUE, TRUE), (34, 39, 7, TRUE, FALSE), (41, 40, 3, TRUE, FALSE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
