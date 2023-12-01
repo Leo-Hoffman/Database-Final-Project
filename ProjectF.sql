@@ -486,9 +486,9 @@ INSERT user_show (user_id, show_id, user_rating, user_finished, in_watchlist) VA
 
 (21, 24, 5, TRUE, FALSE), (22, 38, 7, TRUE, TRUE), (23, 34, 8, TRUE, TRUE), (24, 17, 6, TRUE, FALSE),
 (25, 6, 9, FALSE, TRUE), (26, 37, 5, TRUE, FALSE), (27, 4, 3, FALSE, TRUE), (28, 40, 10, TRUE, FALSE),
-(29, 22, 10, TRUE, TRUE), (30, 3, 6 FALSE, TRUE), (31, 32, 2, FALSE, FALSE), (32, ),
-(33, ), (34, ), (35, ), (36, ),
-(37, ), (38, ), (39, ), (40, );
+(29, 22, 10, TRUE, TRUE), (30, 3, 6 FALSE, TRUE), (31, 32, 2, FALSE, FALSE), (32, 2, 9, TRUE, TRUE),
+(33, 13, 7, TRUE, TRUE), (34, 20, 8, FALSE, TRUE), (35, 28, 3, TRUE, FALSE), (36, 36, 5, TRUE, FALSE),
+(37, 39, 1, FALSE, TRUE), (38, 27, 10, TRUE, TRUE), (39, 19, 6, TRUE, FALSE), (40, 26, 4, FALSE, TRUE);
 
 
 
