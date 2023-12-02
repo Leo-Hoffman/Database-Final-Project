@@ -65,6 +65,7 @@ VALUES
 	('Game of Thrones', 2011, 2019, 9), 
 	('BattleStar Galactica', 1978, 1979, 1),
 	('The Tick', 2001, 2002, 1), 
+	
 	('Firefly', 2002, 2003, 1),
 	('Almost Human', 2013, 2014, 1), 
 	('Band of Brothers', 2001, 2001, 1),
@@ -73,7 +74,8 @@ VALUES
 	('Undeclared', 2001, 2002, 1), 
 	('Sherlock', 2010, 2017, 4),
 	('My So Called Life', 1994, 1995, 1), 
-	('Clone High', 2002, 2003, 1),
+	('Clone High', 2023, 2023, 1),
+	
 	('Flashforward', 2009, 2010, 1), 
 	('Total Drama', 2007, 2008, 1),
 	('The Big Bang Theory', 2007, 2019, 1), 
@@ -84,6 +86,7 @@ VALUES
 	('Twin Peaks', 1989, 1991, 3);
 	('Alice in Borderland', 2020, NULL, 2),
 	('Insecure', 2016, 2021, 5),
+		
 	('The Queen\`s Gambit', 2020, 2020, 1);
 	('Unorthodox', 2020, 2020, 1);
 	('The Fall of the House of Usher', 2023, 2023, 1);
@@ -345,34 +348,140 @@ VALUES
 		('Episode 7', 28, 7, 2),
 		('Episode 8', 28, 8, 2);
 
--- all episode for show id=26, name=Twin Peaks
+-- all episode for show id=27, name=Twin Peaks
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
 	
--- all episode for show id=25, name=Gravity Falls
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
--- all episode for show id=24, name=Better Call Saul
+            	('Pilot', 27, 1, 1), 
+		('ETraces to Nowhere', 27, 2, 1),
+		('Zen, or the Skill to Catch a Killer', 27, 3, 1),
+		('Rest in Pain', 27, 4, 1),
+		('The One-Armed Man', 27, 5, 1),
+		('Cooper Dreams', 27, 6, 1),
+		('Realization Time', 27, 7, 1),
+		('The Last Evening', 27, 8, 1),
+	
+            	('May the Giant Be with You', 27, 1, 2), 
+		('Coma', 27, 2, 2),
+		('The Man Behind the Glass', 27, 3, 2),
+		('Laura Secret Diary', 27, 4, 2),
+		('The Orchids Curse', 27, 5, 2),
+		(' Demons', 27, 6, 2),
+		(' Lonely Souls', 27, 7, 2),
+		('Drive with a Dead Girl', 27, 8, 2);
+
+-- all episode for show id=26, name=Gravity Falls
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
 	
--- all episode for show id=23 name=Stranger Things
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
--- all episode for show id=22 name=Regular Show
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
--- all episode for show id=21 name=The Big Bang Theory
-INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
-	-- all episode for show id=20 Total Drama
+-- all episode for show id=25, name=Better Call Saul
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
 	
+-- all episode for show id=24 name=Stranger Things
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+-- all episode for show id=23 name=Regular Show
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+-- all episode for show id=22 name=The Big Bang Theory
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+-- all episode for show id=21 name=Total Drama
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+-- all episode for show id=20 name=Flashforward
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+-- all episode for show id=19 name=Clone High
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+            	('Let us Try This Again', 19, 1, 1), 
+		('Sleepover', 19, 2, 1),
+		('Anxious Times at Clone High', 19, 3, 1),
+		('The Crown: Joancoming: It is a Cleo Cleo Cleo Cleo World', 19, 4, 1),
+		('Some Talking but Mostly Songs', 19, 5, 1),
+		('Saved by the Knoll', 19, 6, 1),
+		('Spring Broken', 19, 7, 1),
+		('Sexy-Ed', 19, 8, 1);
+		('For Your Consideration', 19, 9, 1),
+		('Clone Alone', 19, 10, 1);
+
+-- all episode for show id=18 name=My So Called Life
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=17 name=Sherlock
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=16 name=Undeclared
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=15 name=Police Squad
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=14 name=Freaks and Geeks
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=13 name=Band of Brothers
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=12 name=Almost Human
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=11 name=Firefly
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
 
 	
--- all episode for show id=2, Wednesday
-  
+-- all episode for show id=10 name=The Tick
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+-- all episode for show id=9 name=BattleStar Galactica
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=8 name=Game of Thrones
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=7 name=Fargo
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+-- all episode for show id=6 name=The Shield
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+	('The Sopranos', 1999, 2007, 6), 
+	('Wednesday', 2022, NULL, 1),
+	('Breaking Bad', 2008, 2013, 5),
+	('Squid Game,', 2021, 2021, 1), 
+	('The Bear', 2021, 2021, 1),
+	('The Shield', 2002, 2008, 1), 
+
+-- all episode for show id=5 name=The Bear
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+
+-- all episode for show id=4 name=Squid Game
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+
+-- all episode for show id=3 name=Breaking Bad
+INSERT INTO episode (episode_title, show_id, episode_number, season_number)
+VALUES 
+
+	
+-- all episode for show id=2 name=Wednesday
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES ('Wednesday\'s Child is Full of Wow', 2, 1, 1), 
 	('Woe Is The Loneliest Number', 2, 2, 1),
@@ -383,16 +492,10 @@ VALUES ('Wednesday\'s Child is Full of Wow', 2, 1, 1),
 	('If You Don\'s Woe Me by Now', 2, 7, 1),
 	('A Merder of Woe', 2, 8, 1);
 
-  
+-- all episode for show id=1 name=The Sopranos
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
-            ('Openings', 8, 1, 1), 
-		('Exchanges', 8, 2, 1),
-		('Doubled Pawns', 8, 3, 1),
-		('Middle Game', 8, 4, 1),
-		('Fork', 8, 5, 1),
-		('Adjournment', 8, 6, 1),
-		('End Game', 8, 7, 1);
+
 
 
 INSERT INTO episode VALUES
