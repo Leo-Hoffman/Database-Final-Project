@@ -465,6 +465,12 @@ VALUES
 -- all episode for show id=3 name=Breaking Bad
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	("Crawl Space", 3, 11, 4),
+	("End Times", 3, 12, 4),
+	("Face Off", 3, 13, 4),
+	(Ozymandias, 3, 14, 5),
+	("Granite State", 3, 15, 5),
+	("Felina", 3, 16, 5);
 
 	
 -- all episode for show id=2 name=Wednesday
@@ -496,16 +502,6 @@ VALUES
 	('The Blue Comet', 1, 20, 6),
 	('Made in America', 1, 21, 6);
 
-	
-
-INSERT INTO episode VALUES
-
-("Ozymandias", 2, 5, 14, 2013),
-("Felina", 2, 5, 16, 2013),
-("Face Off", 2, 4, 13, 2011),
-("Granite State", 5, 15, 2013),
-("Crawl Space", 4, 11, 2011),
-("Crawl Space", 4, 11, 2011);
 
 INSERT INTO user_episode VALUES
 (1, 1, 9, TRUE, FALSE),
