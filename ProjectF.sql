@@ -34,12 +34,69 @@ INSERT INTO users (username, user_password, age) VALUES
 	('1984Orwell', 'BigBrother', 51), ('SpidermanPS3', 'a2n743rtx2z', 24),
 	('Max563Iowa', 'pillow930-039', 38), ('robert$500', 'liveordie13', 44);
 
+CREATE TABLE platform ( 
+	platform_name VARCHAR(20) PRIMARY KEY
+);
+
+INSERT INTO platform VALUES
+("Netflix"),
+("Amazon Prime"),
+("HBO MAX"),
+("Hulu"),
+('Peacock'),
+
+('Tubi'),
+('Disney+'),
+('Paramount+'),
+('Starz'),
+('Youtube Premium'),
+
+('Showtime'),
+('Apple TV+'),
+('ESPN+'),
+('MGM+'),
+('iQIYI'),
+
+('Tencent Video'),
+('Discovery+'),
+('Youku'),
+('Vidio'),
+('ZEE5'),
+
+('SonyLIV'),
+('iflix'),
+('Curiousity Stream'),
+('CNN+'),
+('Eros Now'),
+
+('DAZN'),
+('Crunchyroll'),
+('Funimation'),
+('Viu'),
+('iWantTFC'),
+
+('JioCinema'),
+('Mubi'),
+('Vudu'),
+('Globoplay'),
+('Viaplay'),
+
+('TVING'),
+('RightNow Media'),
+('U-Next'),
+('Crave'),
+('BET+');
+
 CREATE TABLE shows (
 	show_id INT AUTO_INCREMENT PRIMARY KEY,
 	show_name VARCHAR(100),
 	start_year INT,
 	end_year INT,
-	number_of_seasons INT NOT NULL
+	number_of_seasons INT NOT NULL,
+    platform VARCHAR(20),
+    CONSTRAINT
+		FOREIGN KEY (platform)
+		REFERENCES platform(platform_name)
 );
 
 CREATE TABLE episode (
@@ -57,51 +114,51 @@ CREATE TABLE episode (
 
 
 -- show_id = 1
-INSERT INTO shows (show_name, start_year, end_year, number_of_seasons)
+INSERT INTO shows (show_name, start_year, end_year, number_of_seasons, platform)
 VALUES 
-	('The Sopranos', 1999, 2007, 6), 
-	('Wednesday', 2022, NULL, 1),
-	('Breaking Bad', 2008, 2013, 5),
-	('Squid Game,', 2021, 2021, 1), 
-	('The Bear', 2021, 2021, 1),
-	('The Shield', 2002, 2008, 1), 
-	('Fargo', 2014, NULL, 1),
-	('Game of Thrones', 2011, 2019, 9), 
-	('BattleStar Galactica', 1978, 1979, 1),
-	('The Tick', 2001, 2002, 1), 
+	('The Sopranos', 1999, 2007, 6, 'HBO Max'), 
+	('Wednesday', 2022, NULL, 1, 'Netflix'),
+	('Breaking Bad', 2008, 2013, 5, 'Netflix'),
+	('Squid Game,', 2021, 2021, 1, 'Netflix'), 
+	('The Bear', 2021, 2021, 1, 'Hulu'),
+	('The Shield', 2002, 2008, 1, 'Hulu'), 
+	('Fargo', 2014, NULL, 1, 'Hulu'),
+	('Game of Thrones', 2011, 2019, 9, 'HBO Max'), 
+	('BattleStar Galactica', 1978, 1979, 1, NULL),
+	('The Tick', 2001, 2002, 1, 'Amazon Prime'), 
 	
-	('Firefly', 2002, 2003, 1),
-	('Almost Human', 2013, 2014, 1), 
-	('Band of Brothers', 2001, 2001, 1),
-	('Freaks and Geeks', 1999, 2000, 1), 
-	('Police Squad', 1982, 1982, 1),
-	('Undeclared', 2001, 2002, 1), 
-	('Sherlock', 2010, 2017, 4),
-	('My So Called Life', 1994, 1995, 1), 
-	('Clone High', 2023, 2023, 1),
+	('Firefly', 2002, 2003, 1, 'Hulu'),
+	('Almost Human', 2013, 2014, 1, 'Tubi'), 
+	('Band of Brothers', 2001, 2001, 1, 'HBO Max'),
+	('Freaks and Geeks', 1999, 2000, 1, 'Paramount+'), 
+	('Police Squad', 1982, 1982, 1, NULL),
+	('Undeclared', 2001, 2002, 1, NULL), 
+	('Sherlock', 2010, 2017, 4, 'Vudu'),
+	('My So Called Life', 1994, 1995, 1, 'Hulu'), 
+	('Clone High', 2023, 2023, 1, 'Paramount+'),
 	
-	('Flashforward', 2009, 2010, 1), 
-	('Total Drama', 2007, 2008, 1),
-	('The Big Bang Theory', 2007, 2019, 1), 
-	('Regular Show', 2010, 2017, 1),
-	('Stranger Things', 2016, 2023, 4), 
-	('Better Call Saul', 2008, 2013, 6),
-	('Gravity Falls', 2015, 2016, 1), 
-	('Twin Peaks', 1989, 1991, 3),
-	('Alice in Borderland', 2020, NULL, 2),
-	('Insecure', 2016, 2021, 5),
+	('Flashforward', 2009, 2010, 1, NULL), 
+	('Total Drama', 2007, 2008, 1, 'Netflix'),
+	('The Big Bang Theory', 2007, 2019, 1, 'HBO Max'), 
+	('Regular Show', 2010, 2017, 1, 'Hulu'),
+	('Stranger Things', 2016, 2023, 4, 'Netflix'), 
+	('Better Call Saul', 2008, 2013, 6, 'Netflix'),
+	('Gravity Falls', 2015, 2016, 1, 'Hulu'), 
+	('Twin Peaks', 1989, 1991, 3, 'Paramount+'),
+	('Alice in Borderland', 2020, NULL, 2, 'Netflix'),
+	('Insecure', 2016, 2021, 5, 'Netflix'),
 		
-	('The Queen\`s Gambit', 2020, 2020, 1),
-	('Unorthodox', 2020, 2020, 1),
-	('The Fall of the House of Usher', 2023, 2023, 1),
-	('Gaslit', 2023, 2023, 1),
-	('Dahmer - Monster: The Jeffrey Dahmer Story', 2023, NULL, 1),
-	('Snabba Cash', 2021, 2022, 2),
-	('Maid', 2021, 2021, 1),
-	('Boo, Bitch', 2022, 2022, 1),
-	('The Twelve', 2019, NULL, 2),
-	('Superwog', 2018, 2021, 2),
-	('The Carrie Diaries', 2013, 2014, 2);
+	('The Queen\`s Gambit', 2020, 2020, 1, 'Netflix'),
+	('Unorthodox', 2020, 2020, 1, 'Netflix'),
+	('The Fall of the House of Usher', 2023, 2023, 1, 'Netflix'),
+	('Gaslit', 2023, 2023, 1, 'Starz'),
+	('Dahmer - Monster: The Jeffrey Dahmer Story', 2023, NULL, 1, 'Netflix'),
+	('Snabba Cash', 2021, 2022, 2, 'Netflix'),
+	('Maid', 2021, 2021, 1, 'Netflix'),
+	('Boo, Bitch', 2022, 2022, 1, 'Netflix'),
+	('The Twelve', 2019, NULL, 2, 'Netflix'),
+	('Superbro', 2018, 2021, 2, 'Netflix'),
+	('The Carrie Diaries', 2013, 2014, 2, NULL);
 
 -- all episodes for show_id = 40 name=The Carrie Diaries
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
@@ -526,16 +583,6 @@ VALUES
 	('The Blue Comet', 1, 20, 6),
 	('Made in America', 1, 21, 6);
 
-CREATE TABLE platform ( 
-	platform_id INT AUTO_INCREMENT PRIMARY KEY,
-	platform_name VARCHAR(15)
-);
-
-INSERT INTO platform VALUES
-(1, "Netflix"),
-(2, "Amazon Prime"),
-(3, "HBO MAX"),
-(4, "Hulu");
 
 
 CREATE TABLE user_episode (
