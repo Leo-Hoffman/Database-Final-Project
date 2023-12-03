@@ -1,4 +1,7 @@
+DROP DATABASE IF EXISTS show_tracker;
 CREATE DATABASE show_tracker;
+
+USE show_tracker;
 
 CREATE TABLE users (
 	user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -6,9 +9,9 @@ CREATE TABLE users (
 	user_password VARCHAR(15),
 	age INT NOT NULL
 );
-DROP TABLE users;
 
---for users
+-- for users
+
 INSERT INTO users (username, user_password, age) VALUES
 	('robert125', 'Atlas&theAir', 54), ('adam@johnson', 'DevilsPaw', 32),
 	('GodsChild4U', 'Living$84', 36), ('leo1366', 'Walrus9%', 40),
@@ -41,7 +44,7 @@ CREATE TABLE shows (
 
 CREATE TABLE episode (
 	episode_id INT PRIMARY KEY AUTO_INCREMENT,
-   	episode_title VARCHAR(50) NOT NULL,
+   	episode_title VARCHAR(100) NOT NULL,
 	show_id INT NOT NULL,
     	episode_number INT NOT NULL,
    	season_number INT NOT NULL,
@@ -52,7 +55,8 @@ CREATE TABLE episode (
 		UNIQUE(show_id, episode_number, season_number)
 );
 
---show_id = 1
+
+-- show_id = 1
 INSERT INTO shows (show_name, start_year, end_year, number_of_seasons)
 VALUES 
 	('The Sopranos', 1999, 2007, 6), 
@@ -83,20 +87,20 @@ VALUES
 	('Stranger Things', 2016, 2023, 4), 
 	('Better Call Saul', 2008, 2013, 6),
 	('Gravity Falls', 2015, 2016, 1), 
-	('Twin Peaks', 1989, 1991, 3);
+	('Twin Peaks', 1989, 1991, 3),
 	('Alice in Borderland', 2020, NULL, 2),
 	('Insecure', 2016, 2021, 5),
 		
-	('The Queen\`s Gambit', 2020, 2020, 1);
-	('Unorthodox', 2020, 2020, 1);
-	('The Fall of the House of Usher', 2023, 2023, 1);
+	('The Queen\`s Gambit', 2020, 2020, 1),
+	('Unorthodox', 2020, 2020, 1),
+	('The Fall of the House of Usher', 2023, 2023, 1),
 	('Gaslit', 2023, 2023, 1),
-	('Dahmer - Monster: The Jeffrey Dahmer Story', 2023, NULL, 1);
-	('Snabba Cash', 2021, 2022, 2);
-	('Maid', 2021, 2021, 1);
-	('Boo, Bitch', 2022, 2022, 1);
-	('The Twelve', 2019, NULL, 2);
-	('Superwog', 2018, 2021, 2);
+	('Dahmer - Monster: The Jeffrey Dahmer Story', 2023, NULL, 1),
+	('Snabba Cash', 2021, 2022, 2),
+	('Maid', 2021, 2021, 1),
+	('Boo, Bitch', 2022, 2022, 1),
+	('The Twelve', 2019, NULL, 2),
+	('Superwog', 2018, 2021, 2),
 	('The Carrie Diaries', 2013, 2014, 2);
 
 -- all episodes for show_id = 40 name=The Carrie Diaries
@@ -109,7 +113,7 @@ VALUES 		('Pilot', 40, 1, 1),
 		('Endgame', 40, 6, 1),
 		('Caught', 40, 7, 1),
 		('Hush Hush', 40, 8, 1),
-        	('The Great Unknown', 40, 9, 1), 
+		('The Great Unknown', 40, 9, 1), 
 		('The Long and Winding Road Not Taken', 40, 10, 1),
 		('Identity Crisis', 40, 11, 1),
 		('A First Time for Everything', 40, 12, 1),
@@ -123,7 +127,7 @@ VALUES 		('Pilot', 40, 1, 1),
 		('The Safety Dance', 40, 6, 2),
 		('I Heard a Rumor', 40, 7, 2),
 		('The Second Time Around', 40, 8, 2),
-        	('Under Pressure', 40, 9, 2), 
+		('Under Pressure', 40, 9, 2), 
 		('Date Expectations', 40, 10, 2),
 		('Hungry Like the Wolf', 40, 11, 2),
 		('This is the Time ', 40, 12, 2),
@@ -156,7 +160,7 @@ VALUES
 	('Episode #1.5', 38, 5, 1),
 	('Episode #1.6', 38, 6, 1),
 	('Episode #1.7', 38, 7, 1),
-	('Episode #1.8', 38, 8, 1),
+	('Episode #1.8', 38, 8, 1);
 
 
 -- Episodes for show_id = 37 name='Boo bitch'
@@ -194,10 +198,10 @@ VALUES
 	('Gonna Be 2 Rocks, Leya', 35, 2, 1),
 	('Friends and Family', 35, 3, 1),
 	('Was Never Bout the Cheese, Things Just Happened This Way', 35, 4, 1),
-	('If You Play with Fire, You're Gonna Get Burned', 35, 5, 1),
+	('If You Play with Fire, You\'re Gonna Get Burned', 35, 5, 1),
 	('Making Money Is Never Bad!', 35, 6, 1),
 
-        ('t Was Dag Hammarskjöld, Fam', 35, 1, 2), 
+	('t Was Dag Hammarskjöld, Fam', 35, 1, 2), 
 	('Are They Chatting or Selling?', 35, 2, 2),
 	('We \' ll Try One with You', 35, 3, 2),
 	('Waste Them All', 35, 4, 2),
@@ -270,53 +274,53 @@ VALUES
 -- all episode for show id=29, name=insecure
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
-            ('Insecure as Fuck', 7, 1, 1), 
-		('Messy as F...', 7, 2, 1),
-		('Racist as F...', 7, 3, 1),
-		('Thirsty as F...', 7, 4, 1),
-		('Shady as F...', 7, 5, 1),
-		('Guilty as F...', 7, 6, 1),
-		('Real as F...', 7, 7, 1),
-		('Broken as F...', 7, 8, 1),
+            ('Insecure as Fuck', 29, 1, 1), 
+		('Messy as F...', 29, 2, 1),
+		('Racist as F...', 29, 3, 1),
+		('Thirsty as F...', 29, 4, 1),
+		('Shady as F...', 29, 5, 1),
+		('Guilty as F...', 29, 6, 1),
+		('Real as F...', 29, 7, 1),
+		('Broken as F...', 29, 8, 1),
 
-                ('Hella Great', 7, 1, 2), 
-		('Hella Questions', 7, 2, 2),
-		('Hella Open', 7, 3, 2),
-		('Hella LA', 7, 4, 2),
-		('Hella Shook', 7, 5, 2),
-		('Hello Blows', 7, 6, 2),
-		('Hella Disrespectful', 7, 7, 2),
-		('Hella Perspective', 7, 8, 2),
+		('Hella Great', 29, 1, 2), 
+		('Hella Questions', 29, 2, 2),
+		('Hella Open', 29, 3, 2),
+		('Hella LA', 29, 4, 2),
+		('Hella Shook', 29, 5, 2),
+		('Hello Blows', 29, 6, 2),
+		('Hella Disrespectful', 29, 7, 2),
+		('Hella Perspective', 29, 8, 2),
 	
-		('Better-Like', 7, 1, 3),
-		('Familiar-Like', 7, 2, 3),
-		('Backwards-Like', 7, 3, 3),
-		('Fresh-Like', 7, 4, 3),
-		('High-Like', 7, 5, 3),
-		('Ready-Like', 7, 6, 3),
-		('Obsessed-Like', 7, 7, 3),
-                ('Ghost-Like', 7, 8, 3),
+		('Better-Like', 29, 1, 3),
+		('Familiar-Like', 29, 2, 3),
+		('Backwards-Like', 29, 3, 3),
+		('Fresh-Like', 29, 4, 3),
+		('High-Like', 29, 5, 3),
+		('Ready-Like', 29, 6, 3),
+		('Obsessed-Like', 29, 7, 3),
+		('Ghost-Like', 29, 8, 3),
 	
-              ('Lowkey Feelin\' Myself', 7, 10, 4), 
-		('Lowkey Distant', 7, 9, 4),
-		('Lowkey Thankful', 7, 3, 4),
-		('Lowkey Losin\' It', 7, 4, 4),
-		('Lokwey Movin On', 7, 5, 4),
-		('Lowkey Done', 7, 6, 4),
-		('Lowkey Trippin', 7, 7, 4),
-		('Lowkey Happy', 7, 8, 4),
-		('Lowkey Trying', 7, 9, 4),
-                ('Lowkey Lost', 7, 10, 4),
+		('Lowkey Feelin\' Myself', 29, 1, 4), 
+		('Lowkey Distant', 29, 2, 4),
+		('Lowkey Thankful', 29, 3, 4),
+		('Lowkey Losin\' It', 29, 4, 4),
+		('Lokwey Movin On', 29, 5, 4),
+		('Lowkey Done', 29, 6, 4),
+		('Lowkey Trippin', 29, 7, 4),
+		('Lowkey Happy', 29, 8, 4),
+		('Lowkey Trying', 29, 9, 4),
+		('Lowkey Lost', 29, 10, 4),
 	
-		('Reunited, Okay?', 7, 2, 5),
-		('Growth, Okay?', 7, 3, 5),
-		('Pressure, Okay?', 7, 4, 5),
-		('Faulty, Okay?', 7, 5, 5),
-		('Episode 6', 7, 6, 5),
-		('Episode 7', 7, 7, 5),
-		('Episode 8', 7, 8, 5),
-		('Episode 9', 7, 6, 5),
-		('Episode 10', 7, 7, 5);
+		('Reunited, Okay?', 29, 2, 5),
+		('Growth, Okay?', 29, 3, 5),
+		('Pressure, Okay?', 29, 4, 5),
+		('Faulty, Okay?', 29, 5, 5),
+		('Episode 6', 29, 6, 5),
+		('Episode 7', 29, 7, 5),
+		('Episode 8', 29, 8, 5),
+		('Episode 9', 29, 9, 5),
+		('Episode 10', 29, 10, 5);
 
 -- all episode for show id=28, name=Alice in Borderland
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
@@ -364,26 +368,33 @@ VALUES
 -- all episode for show id=26, name=Gravity Falls
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 26, 1, 1);
 	
 -- all episode for show id=25, name=Better Call Saul
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	("Uno", 25, 1, 1);
 	
 -- all episode for show id=24 name=Stranger Things
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 24, 1, 1);
 -- all episode for show id=23 name=Regular Show
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 23, 1, 1);
 -- all episode for show id=22 name=The Big Bang Theory
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 22, 1, 1);
 -- all episode for show id=21 name=Total Drama
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 21, 1, 1);
 -- all episode for show id=20 name=Flashforward
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 20, 1, 1);
 -- all episode for show id=19 name=Clone High
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
@@ -394,72 +405,85 @@ VALUES
 		('Some Talking but Mostly Songs', 19, 5, 1),
 		('Saved by the Knoll', 19, 6, 1),
 		('Spring Broken', 19, 7, 1),
-		('Sexy-Ed', 19, 8, 1);
+		('Sexy-Ed', 19, 8, 1),
 		('For Your Consideration', 19, 9, 1),
 		('Clone Alone', 19, 10, 1);
 
 -- all episode for show id=18 name=My So Called Life
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 18, 1, 1);
 
 -- all episode for show id=17 name=Sherlock
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
-VALUES 
+VALUES
+	("A Study in Pink", 17, 1, 1);
 
 -- all episode for show id=16 name=Undeclared
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 16, 1, 1);
 
 -- all episode for show id=15 name=Police Squad
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 15, 1, 1);
 
 -- all episode for show id=14 name=Freaks and Geeks
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 14, 1, 1);
 
 -- all episode for show id=13 name=Band of Brothers
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 13, 1, 1);
 
 -- all episode for show id=12 name=Almost Human
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 12, 1, 1);
 
 -- all episode for show id=11 name=Firefly
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
-
+	('Episode 1', 11, 1, 1);
 	
 -- all episode for show id=10 name=The Tick
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 10, 1, 1);
 -- all episode for show id=9 name=BattleStar Galactica
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 9, 1, 1);
 
 -- all episode for show id=8 name=Game of Thrones
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 8, 1, 1);
 
 -- all episode for show id=7 name=Fargo
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 7, 1, 1);
 
 -- all episode for show id=6 name=The Shield
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
-
+	('Episode 1', 6, 1, 1);
 
 
 -- all episode for show id=5 name=The Bear
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 5, 1, 1);
 
 
 -- all episode for show id=4 name=Squid Game
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Episode 1', 4, 1, 1);
 
 
 -- all episode for show id=3 name=Breaking Bad
@@ -467,8 +491,8 @@ INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
 	("Crawl Space", 3, 11, 4),
 	("End Times", 3, 12, 4),
-	("Face Off", 3, 13, 4),
-	(Ozymandias, 3, 14, 5),
+	('Face Off', 3, 13, 4),
+	('Ozymandias', 3, 14, 5),
 	("Granite State", 3, 15, 5),
 	("Felina", 3, 16, 5);
 
@@ -502,19 +526,6 @@ VALUES
 	('The Blue Comet', 1, 20, 6),
 	('Made in America', 1, 21, 6);
 
-
-INSERT INTO user_episode VALUES
-(1, 1, 9, TRUE, FALSE),
-(1, 2, 10, TRUE, FALSE),
-(1, 3, 10, TRUE, FALSE),
-(2, 1, 7, TRUE, FALSE),
-(2, 2, 0, FALSE, TRUE),
-(2, 3, 8, FALSE, FALSE),
-(3, 1, 3, TRUE, FALSE),
-(3, 2, 0, FALSE, FALSE),
-(3, 3, 0, FALSE, FALSE);
-
-
 CREATE TABLE platform ( 
 	platform_id INT AUTO_INCREMENT PRIMARY KEY,
 	platform_name VARCHAR(15)
@@ -543,13 +554,22 @@ CREATE TABLE user_episode (
         REFERENCES users(user_id)
 );
 
+INSERT INTO user_episode VALUES
+(1, 1, 9, TRUE, FALSE),
+(1, 2, 10, TRUE, FALSE),
+(2, 2, 0, FALSE, TRUE),
+(2, 3, 8, FALSE, FALSE),
+(3, 1, 3, TRUE, FALSE),
+(3, 2, 0, FALSE, FALSE),
+(3, 3, 0, FALSE, FALSE);
+
 INSERT INTO user_episode (episode_id, user_id, user_rating, user_has_seen, in_watchlist) VALUES
 (2, 1, 8, TRUE, TRUE), (13, 2, 5, FALSE, TRUE), (1, 3, 1, FALSE, FALSE), (15, 4, 9, TRUE, FALSE),
 (9, 5, 6, TRUE, TRUE), (3, 6, 10, TRUE, FALSE), (4, 7, 7, TRUE, TRUE), (23, 8, 2, FALSE, TRUE), 
 (6, 9, 4, FALSE, TRUE), (17, 10, 3, TRUE, TRUE), (10, 11, 1, TRUE, FALSE), (30, 12, 3, TRUE, FALSE), 
 (22, 13, 5, TRUE, FALSE), (14, 14, 8, FALSE, FALSE), (19, 15, 6, TRUE, TRUE), (18, 16, 7, FALSE, TRUE),
 (16, 17, 3, FALSE, FALSE), (11, 18, 4, TRUE, TRUE), (7, 19, 5, TRUE, FALSE ), (24, 20, 9, TRUE, FALSE),
-(21, 21, 7, TRUE, FALSE), (, 25, 22, 3, FALSE, FALSE), (12, 23, 6, TRUE, TRUE), (8. 24, 5, FALSE, TRUE),
+(21, 21, 7, TRUE, FALSE), (25, 22, 3, FALSE, FALSE), (12, 23, 6, TRUE, TRUE), (8, 24, 5, FALSE, TRUE),
 (5, 25, 4, FALSE, FALSE), (10, 26, 1, TRUE, FALSE), (27, 27, 8, FALSE, TRUE), (29, 28, 10, TRUE, FALSE),
 (20, 29, 7, TRUE, TRUE), (25, 30, 1, FALSE, TRUE), (45, 31, 9, TRUE, FALSE), (42, 32, 5, TRUE, FALSE),
 (35, 33, 8, FALSE, FALSE), (31, 34, 3, TRUE, TRUE), (40, 35, 4, FALSE, TRUE), (32, 36, 2, TRUE, FALSE),
@@ -571,35 +591,16 @@ CREATE TABLE user_show (
         REFERENCES users(user_id)
 );
 
+
 INSERT user_show (user_id, show_id, user_rating, user_finished, in_watchlist) VALUES
 (1, 12, 6, TRUE, FALSE), (2, 8, 3, FALSE, TRUE), (3, 9, 7, TRUE, TRUE), (4, 25, 5, FALSE, TRUE), 
 (5, 16, 2, FALSE, TRUE), (6, 30, 10, TRUE, TRUE), (7, 21, 8, TRUE, FALSE), (8, 1, 4, FALSE, TRUE), 
 (9, 14, 7, TRUE, TRUE), (10, 33, 4, FALSE, TRUE ), (11, 15, 8, FALSE, TRUE), (12, 10, 3, TRUE, FALSE), 
-(13, 35, 5, FALSE, TRUE), (14, 7, 9, TRUE, TRUE ), (15, 11, TRUE, FALSE), (16, 23, 10, FALSE, TRUE),
+(13, 35, 5, FALSE, TRUE), (14, 7, 9, TRUE, TRUE ), (15, 11, 5, TRUE, FALSE), (16, 23, 10, FALSE, TRUE),
 (17, 18, 1, TRUE, TRUE), (18, 31, 2, FALSE, TRUE), (19, 29, 4, TRUE, TRUE), (20, 5, 9, FALSE, FALSE),
 
 (21, 24, 5, TRUE, FALSE), (22, 38, 7, TRUE, TRUE), (23, 34, 8, TRUE, TRUE), (24, 17, 6, TRUE, FALSE),
 (25, 6, 9, FALSE, TRUE), (26, 37, 5, TRUE, FALSE), (27, 4, 3, FALSE, TRUE), (28, 40, 10, TRUE, FALSE),
-(29, 22, 10, TRUE, TRUE), (30, 3, 6 FALSE, TRUE), (31, 32, 2, FALSE, FALSE), (32, 2, 9, TRUE, TRUE),
+(29, 22, 10, TRUE, TRUE), (30, 3, 6, FALSE, TRUE), (31, 32, 2, FALSE, FALSE), (32, 2, 9, TRUE, TRUE),
 (33, 13, 7, TRUE, TRUE), (34, 20, 8, FALSE, TRUE), (35, 28, 3, TRUE, FALSE), (36, 36, 5, TRUE, FALSE),
 (37, 39, 1, FALSE, TRUE), (38, 27, 10, TRUE, TRUE), (39, 19, 6, TRUE, FALSE), (40, 26, 4, FALSE, TRUE);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
