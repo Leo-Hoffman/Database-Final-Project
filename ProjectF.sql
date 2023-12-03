@@ -230,16 +230,7 @@ VALUES
 	('Honeymoon', 33, 5, 1),
 	('Tuffy', 33, 6, 1),
 	('Year of the Rat', 33, 7, 1),
-	('Final Days', 33, 8, 1),
-
-        ('Episode 1', 1, 1, 2), 
-	('Episode 2', 1, 2, 2),
-	('Episode 3', 1, 3, 2),
-	('Episode 4', 1, 4, 2),
-	('Episode 5', 1, 5, 2),
-	('Episode 6', 1, 6, 2),
-	('Episode 7', 1, 7, 2),
-	('Episode 8', 1, 8, 2);
+	('Final Days', 33, 8, 1);
 
  -- all episode for show_id = 32  name=The Fall of the House of Usher
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
@@ -353,7 +344,7 @@ INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
 	
             	('Pilot', 27, 1, 1), 
-		('ETraces to Nowhere', 27, 2, 1),
+		('Traces to Nowhere', 27, 2, 1),
 		('Zen, or the Skill to Catch a Killer', 27, 3, 1),
 		('Rest in Pain', 27, 4, 1),
 		('The One-Armed Man', 27, 5, 1),
@@ -459,12 +450,7 @@ VALUES
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
 
-	('The Sopranos', 1999, 2007, 6), 
-	('Wednesday', 2022, NULL, 1),
-	('Breaking Bad', 2008, 2013, 5),
-	('Squid Game,', 2021, 2021, 1), 
-	('The Bear', 2021, 2021, 1),
-	('The Shield', 2002, 2008, 1), 
+
 
 -- all episode for show id=5 name=The Bear
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
@@ -495,16 +481,25 @@ VALUES ('Wednesday\'s Child is Full of Wow', 2, 1, 1),
 -- all episode for show id=1 name=The Sopranos
 INSERT INTO episode (episode_title, show_id, episode_number, season_number)
 VALUES 
+	('Pilot', 1, 1, 1),
+	('46 Long', 1, 2, 1),
+	('Denial, Anger, Acceptance', 1, 3, 1),
+	('Episode 1', 1, 1, 2), 
+	('Episode 2', 1, 2, 2),
+	('Episode 3', 1, 3, 2),
+	('Episode 4', 1, 4, 2),
+	('Episode 5', 1, 5, 2),
+	('Episode 6', 1, 6, 2),
+	('Episode 7', 1, 7, 2),
+	('Episode 8', 1, 8, 2),
+	('Whitecaps', 1, 13, 4),
+	('The Blue Comet', 1, 20, 6),
+	('Made in America', 1, 21, 6);
 
-
+	
 
 INSERT INTO episode VALUES
-("Pilot", 1, 1, 1, '1999'),
-("46 Long", 1, 1, 2, '1999'),
-("Denial, Anger, Acceptance", 1, 1, 3, '1999'),
-("Made in America", 1, 6, 21, '2007-01-10'),
-("The Blue Comet", 1, 6, 20, '2007-01-10'),
-("Whitecaps", 1, 4, 13, '2002'),
+
 ("Ozymandias", 2, 5, 14, 2013),
 ("Felina", 2, 5, 16, 2013),
 ("Face Off", 2, 4, 13, 2011),
