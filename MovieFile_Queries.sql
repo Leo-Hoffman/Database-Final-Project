@@ -40,6 +40,8 @@ ON e.episode_id = u.episode_id
 WHERE user_rating < 6
 ORDER BY episode_id DESC;
 
+-- Selects all users, their age, and their average rating for users over 35.
+
 SELECT username, age, (
 	SELECT AVG(user_rating)
     FROM user_episode u JOIN episode e
@@ -51,7 +53,7 @@ FROM users
 WHERE age >= 35
 ORDER BY username;
 
--- Selects any Netflix show that has any user has rated higher than 3.
+-- Selects any Netflix show that h as any user has rated higher than 3.
 
 SELECT platform, show_name, user_rating
 FROM shows s JOIN user_show u
