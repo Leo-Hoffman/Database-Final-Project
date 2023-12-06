@@ -91,7 +91,7 @@ ORDER BY average_rating DESC;
 SELECT AVG(user_rating)
     FROM user_episode u JOIN episode e
     ON e.episode_id = u.episode_id
-    WHERE user_id = 1 AND show_id = 1
+    WHERE user_id = 1
     GROUP BY show_id;
 
 -- 
